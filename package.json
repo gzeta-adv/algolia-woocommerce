@@ -1,6 +1,6 @@
 {
   "name": "algolia-woocommerce",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "repository": "https://github.com/gzeta-adv/algolia",
   "description": "Actions to manage and synchronize products between WooCommerce and Algolia",
   "keywords": [
