@@ -49,7 +49,7 @@ pnpm action:dev sync-products
 pnpm action sync-products
 ```
 
-The action is configured to be run:
+The action is configured to run:
 
 - Every 5 minutes (GitHub limit)
 - With a `workflow_dispatch` event via the GitHub interface
