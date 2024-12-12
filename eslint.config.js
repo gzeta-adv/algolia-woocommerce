@@ -229,6 +229,7 @@ export default [
           },
         ],
         '@typescript-eslint/no-useless-empty-export': 2,
+        '@typescript-eslint/no-unnecessary-condition': 0,
         '@typescript-eslint/prefer-for-of': 2,
         '@typescript-eslint/prefer-string-starts-ends-with': 2,
         '@typescript-eslint/restrict-template-expressions': [

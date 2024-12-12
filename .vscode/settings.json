@@ -23,11 +23,5 @@
   "search.exclude": {
     "**/build": true,
     "**/node_modules": true
-  },
-  "workbench.colorCustomizations": {
-    "titleBar.activeBackground": "#059dde",
-    "titleBar.activeForeground": "#ffffff",
-    "titleBar.inactiveBackground": "#059dde",
-    "titleBar.inactiveForeground": "#ffffff"
   }
 }

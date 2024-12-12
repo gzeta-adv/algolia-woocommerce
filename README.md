@@ -5,6 +5,7 @@
     <img src=".github/static/logo.png" width="220">
   </picture>
   <h1>Algolia WooCommerce</h1>
+  <img src="https://img.shields.io/github/package-json/v/gzeta-adv/algolia-woocommerce?style=flat&color=white">
   <a href="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/sync-products.yml">
     <img src="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/sync-products.yml/badge.svg" />
   </a>
@@ -17,13 +18,13 @@ GitHub Actions based utilities to manage and synchronize products between WooCom
 
 ## Prerequisites
 
-You must download and activate the Node.js version specified in [`.node-version`](.node-version).
+You must download and activate the Node.js version specified [here](.node-version).
 
 Copy the `.env.example` file to `.env` and fill in the necessary environment variables.
 
 ## Setup
 
-Clone the project using the GitHub client or Git:
+Clone the project or use it [as a template](https://github.com/new?template_name=algolia-woocommerce&template_owner=gzeta-adv):
 
 ```sh
 gh repo clone gzeta-adv/algolia-woocommerce

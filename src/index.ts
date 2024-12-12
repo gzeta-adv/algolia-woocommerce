@@ -7,11 +7,9 @@ if (!input) exit('Error: no action provided')
 if (opts.length) exit('Error: unexpected options provided')
 
 void (async () => {
-  try {
-    const actionKey = kebabToCamel(input) as keyof typeof actions
-    const action = actions[actionKey]
-    await action()
-  } catch {
-    exit(`Error: action ${input} not found.`)
-  }
+  const actionKey = kebabToCamel(input) as keyof typeof actions
+  const action = actions[actionKey]
+  if (!action) exit(`Error: action ${input} not found.`)
+
+  await action()
 })()
