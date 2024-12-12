@@ -19,7 +19,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint . && prettier --check .",
     "lint:fix": "eslint --fix . && prettier --write .",
-    "check": "pnpm run typecheck && pnpm run lint"
+    "check": "pnpm run typecheck && pnpm run lint",
+    "release": "release-it"
   },
   "dependencies": {
     "@algolia/client-search": "^5.17.0",
@@ -31,6 +32,8 @@
     "@commitlint/config-conventional": "^19.6.0",
     "@commitlint/types": "^19.5.0",
     "@eslint/js": "^9.16.0",
+    "@release-it/bumper": "^6.0.1",
+    "@release-it/conventional-changelog": "^9.0.3",
     "@stylistic/eslint-plugin": "^2.12.1",
     "@stylistic/eslint-plugin-ts": "^2.12.1",
     "@types/node": "^22.10.2",
@@ -46,6 +49,8 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "husky": "^9.1.7",
     "prettier": "^3.4.2",
+    "release-it": "^17.10.0",
+    "release-it-pnpm": "^4.6.3",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.0"
