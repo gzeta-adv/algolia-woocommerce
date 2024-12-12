@@ -24,7 +24,7 @@ jobs:
           echo ./node_modules/.bin >> $GITHUB_PATH
       - name: Run commitlint on push
         if: github.event_name == 'push' && !github.event.forced
-        run: commitlint --from ${{ github.event.before }} --to ${{ github.event.after }} --verbose
+        run: commitlint --from ${{ github.event.before }} --to ${{ github.sha }} --verbose
       - name: Run commitlint on force push
         if: github.event_name == 'push' && github.event.forced
         run: commitlint --last --verbose

@@ -17,7 +17,7 @@ jobs:
         with:
           node-version-file: .node-version
       - run: corepack install
-      - name: run pnpm install
+      - name: Run pnpm install
         run: pnpm install --frozen-lockfile --recursive
       - run: pnpm build
       - run: pnpm action sync-products

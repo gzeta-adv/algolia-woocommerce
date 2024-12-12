@@ -8,7 +8,6 @@ updates:
       interval: monthly
     labels:
       - dependencies
-      - npm
     groups:
       deps:
         applies-to: version-updates
