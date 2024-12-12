@@ -1,5 +1,9 @@
 <div align="center">
-  <img src=".github/static/logo.png" width="220">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset=".github/static/logo.png" width="220">
+    <source media="(prefers-color-scheme: dark)" srcset=".github/static/logo-light.png" width="220">
+    <img src=".github/static/logo.png" width="220">
+  </picture>
   <h1>Algolia WooCommerce</h1>
   <a href="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/sync-products.yml">
     <img src="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/sync-products.yml/badge.svg" />
