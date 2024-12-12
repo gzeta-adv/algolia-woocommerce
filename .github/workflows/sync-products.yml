@@ -24,7 +24,7 @@ jobs:
         env:
           ALGOLIA_APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
           ALGOLIA_PRIVATE_KEY: ${{ secrets.ALGOLIA_PRIVATE_KEY }}
-          ALGOLIA_INDEX: ${{ vars.ALGOLIA_INDEX }}
-          WOOCOMMERCE_URL: ${{ vars.WOOCOMMERCE_URL }}
+          ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }}
+          WOOCOMMERCE_URL: ${{ secrets.WOOCOMMERCE_URL }}
           WOOCOMMERCE_KEY: ${{ secrets.WOOCOMMERCE_KEY }}
           WOOCOMMERCE_SECRET: ${{ secrets.WOOCOMMERCE_SECRET }}
