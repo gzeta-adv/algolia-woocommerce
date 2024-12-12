@@ -1,0 +1,30 @@
+name: Sync Products
+
+on:
+  schedule:
+    - cron: '* * * * *'
+  repository_dispatch:
+    types: [sync-products]
+  workflow_dispatch:
+
+jobs:
+  sync-products:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - run: corepack install
+      - name: run pnpm install
+        run: pnpm install --frozen-lockfile --recursive
+      - run: pnpm build
+      - run: pnpm action sync-products
+        env:
+          ALGOLIA_APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+          ALGOLIA_PRIVATE_KEY: ${{ secrets.ALGOLIA_PRIVATE_KEY }}
+          ALGOLIA_INDEX: ${{ vars.ALGOLIA_INDEX }}
+          WOOCOMMERCE_URL: ${{ vars.WOOCOMMERCE_URL }}
+          WOOCOMMERCE_KEY: ${{ secrets.WOOCOMMERCE_KEY }}
+          WOOCOMMERCE_SECRET: ${{ secrets.WOOCOMMERCE_SECRET }}

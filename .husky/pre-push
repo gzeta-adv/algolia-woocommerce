@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Run commitlint on new commits
+commitlint --from origin/main --to HEAD --verbose
+
+# Run CI checks
+pnpm run check

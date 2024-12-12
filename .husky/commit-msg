@@ -1,0 +1,13 @@
+#!/bin/sh
+
+commit=$(cat "$1")
+
+# Ignore temporary commits (will run on push)
+case "$commit" in
+  \[tmp\]*|\#*)
+    exit 0
+    ;;
+esac
+
+# Run commitlint
+commitlint --edit "$1"

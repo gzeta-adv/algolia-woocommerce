@@ -1,0 +1,34 @@
+name: Validate Commits
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  validate-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - run: corepack install
+      - name: Run pnpm install
+        run: |
+          pnpm install --recursive
+          pnpm build
+          echo ./node_modules/.bin >> $GITHUB_PATH
+      - name: Run commitlint on push
+        if: github.event_name == 'push' && !github.event.forced
+        run: commitlint --from ${{ github.event.before }} --to ${{ github.event.after }} --verbose
+      - name: Run commitlint on force push
+        if: github.event_name == 'push' && github.event.forced
+        run: commitlint --last --verbose
+      - name: Run commitlint on PR
+        if: github.event_name == 'pull_request' && github.actor != 'dependabot[bot]'
+        run: commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
+      - run: pnpm check

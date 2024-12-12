@@ -1,0 +1,53 @@
+{
+  "name": "algolia-woocommerce",
+  "version": "0.0.0",
+  "repository": "https://github.com/gzeta-adv/algolia",
+  "description": "Actions to manage and synchronize products between WooCommerce and Algolia",
+  "keywords": [
+    "algolia",
+    "woocommerce",
+    "github-actions"
+  ],
+  "type": "module",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "prepare": "husky",
+    "build": "tsc --project tsconfig.build.json",
+    "build:watch": "pnpm run build --watch",
+    "action": "node build/index.js",
+    "action:dev": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint --fix . && prettier --write .",
+    "check": "pnpm run typecheck && pnpm run lint"
+  },
+  "dependencies": {
+    "@algolia/client-search": "^5.17.0",
+    "@woocommerce/woocommerce-rest-api": "^1.0.1",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/types": "^19.5.0",
+    "@eslint/js": "^9.16.0",
+    "@stylistic/eslint-plugin": "^2.12.1",
+    "@stylistic/eslint-plugin-ts": "^2.12.1",
+    "@types/node": "^22.10.2",
+    "@types/woocommerce__woocommerce-rest-api": "^1.0.5",
+    "eslint": "^9.16.0",
+    "eslint-config-flat-gitignore": "^0.3.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-perfectionist": "^4.2.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-sort-destructure-keys": "^2.0.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  }
+}
