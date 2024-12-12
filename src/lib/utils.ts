@@ -1,5 +1,5 @@
-import { error } from 'node:console'
 import { exit as exitProcess } from 'node:process'
+import { error } from './logger.js'
 
 /**
  * Imports a module with a default export.
