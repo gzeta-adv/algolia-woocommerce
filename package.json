@@ -23,7 +23,7 @@
     "release": "release-it"
   },
   "dependencies": {
-    "@algolia/client-search": "^5.17.0",
+    "@algolia/client-search": "^5.17.1",
     "@woocommerce/woocommerce-rest-api": "^1.0.1",
     "dotenv": "^16.4.7"
   },
