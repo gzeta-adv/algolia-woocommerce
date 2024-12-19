@@ -1,4 +1,4 @@
-import { searchClient, type SearchClient } from '@algolia/client-search'
+import { searchClient, type PartialUpdateObjectsOptions, type SearchClient } from '@algolia/client-search'
 import Env from '../../lib/env.js'
 
 /**
@@ -7,3 +7,8 @@ import Env from '../../lib/env.js'
 const algolia: SearchClient = searchClient(Env.ALGOLIA_APPLICATION_ID, Env.ALGOLIA_PRIVATE_KEY)
 
 export default algolia
+
+export const algoliaUpdateOptions: Omit<PartialUpdateObjectsOptions, 'indexName' | 'objects'> = {
+  createIfNotExists: true,
+  waitForTasks: true,
+}

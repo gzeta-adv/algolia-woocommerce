@@ -18,7 +18,6 @@ import requireExtensionPlugin from './eslint-plugin-require-extension.js'
 export default [
   gitignoreConfig(),
   eslint.configs.recommended,
-  // requireExtensionPlugin.configs.recommended,
   {
     name: 'base',
     files: ['**/*.{js,ts}'],
@@ -220,6 +219,7 @@ export default [
           },
         ],
         '@typescript-eslint/no-explicit-any': 0,
+        '@typescript-eslint/no-floating-promises': 0,
         '@typescript-eslint/no-namespace': 0,
         '@typescript-eslint/no-unsafe-call': 0,
         '@typescript-eslint/no-unused-vars': [
@@ -230,6 +230,7 @@ export default [
         ],
         '@typescript-eslint/no-useless-empty-export': 2,
         '@typescript-eslint/no-unnecessary-condition': 0,
+        '@typescript-eslint/no-unnecessary-type-parameters': 0,
         '@typescript-eslint/prefer-for-of': 2,
         '@typescript-eslint/prefer-string-starts-ends-with': 2,
         '@typescript-eslint/restrict-template-expressions': [

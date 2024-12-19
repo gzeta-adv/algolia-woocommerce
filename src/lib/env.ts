@@ -10,7 +10,6 @@ export class EnvError extends Error {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters
 const get = <T = string>(key: string, defaultValue?: any): T => {
   const value = process.env[key] || String(defaultValue)
   if (!value) throw new EnvError(key)
@@ -19,15 +18,26 @@ const get = <T = string>(key: string, defaultValue?: any): T => {
   return value as T
 }
 
+const error = (message: string) => {
+  throw new EnvError(message)
+}
+
+const HOSTNAME = get('HOSTNAME')
+const STORE_URL = `https://${HOSTNAME}`
+
 const Env = {
   /**
    * ID of the Algolia application.
    */
   ALGOLIA_APPLICATION_ID: get('ALGOLIA_APPLICATION_ID'),
   /**
-   * Name of the main Algolia index.
+   * Name of the Algolia index storing categories.
    */
-  ALGOLIA_INDEX: get('ALGOLIA_INDEX'),
+  ALGOLIA_INDEX_CATEGORIES: get('ALGOLIA_INDEX_CATEGORIES'),
+  /**
+   * Name of the Algolia index storing products.
+   */
+  ALGOLIA_INDEX_PRODUCTS: get('ALGOLIA_INDEX_PRODUCTS'),
   /**
    * Algolia Admin API key.
    */
@@ -42,11 +52,18 @@ const Env = {
    */
   GITHUB_ACTIONS: get<boolean>('GITHUB_ACTIONS', false),
   /**
+   * Hostname of the store.
+   */
+  HOSTNAME,
+  /**
    * Current Node.js environment.
-   * @type {'development' | 'production' | 'test'}
    * @default 'development'
    */
   NODE_ENV: get('NODE_ENV', 'development'),
+  /**
+   * URL of the store.
+   */
+  STORE_URL,
   /**
    * WooCommerce consumer key.
    */
@@ -56,9 +73,9 @@ const Env = {
    */
   WOOCOMMERCE_SECRET: get('WOOCOMMERCE_SECRET'),
   /**
-   * URL of the WooCommerce store.
+   * Throws an environment error with the specified message.
    */
-  WOOCOMMERCE_URL: get('WOOCOMMERCE_URL'),
+  error,
   /**
    * Gets the value of an environment variable or throws an error if not defined.
    */

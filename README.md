@@ -6,8 +6,8 @@
   </picture>
   <h1>Algolia WooCommerce</h1>
   <img src="https://img.shields.io/github/package-json/v/gzeta-adv/algolia-woocommerce?style=flat&color=white">
-  <a href="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/sync-products.yml">
-    <img src="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/sync-products.yml/badge.svg" />
+  <a href="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/sync.yml">
+    <img src="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/sync.yml/badge.svg" />
   </a>
   <a href="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/validate-commits.yml">
     <img src="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/validate-commits.yml/badge.svg" />
@@ -43,7 +43,37 @@ pnpm build
 
 ## Actions
 
-### Sync Products
+### Available Actions
+
+#### Sync
+
+Syncs all products and categories between WooCommerce and Algolia.
+
+Run the action with:
+
+```sh
+# Development
+pnpm action:dev sync
+# Production
+pnpm action sync
+```
+
+#### Sync Categories
+
+Syncs all categories between WooCommerce and Algolia.
+
+Run the action with:
+
+```sh
+# Development
+pnpm action:dev sync-categories
+# Production
+pnpm action sync-categories
+```
+
+#### Sync Products
+
+Syncs all products between WooCommerce and Algolia.
 
 Run the action with:
 
@@ -54,7 +84,9 @@ pnpm action:dev sync-products
 pnpm action sync-products
 ```
 
-The action is configured to run:
+### Triggers
+
+The [sync workflow](.github/workflows/sync.yml) is configured to run the `sync` action:
 
 - Every 5 minutes (GitHub limit)
 - With a `workflow_dispatch` event via the GitHub interface
@@ -64,5 +96,5 @@ The action is configured to run:
   curl --request POST \
     --url 'https://api.github.com/repos/<repo>/dispatches' \
     --header 'authorization: Bearer <GITHUB_ACCESS_TOKEN>' \
-    --data '{ "event_type": "sync-products" }'
+    --data '{ "event_type": "sync" }'
   ```
