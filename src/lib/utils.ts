@@ -24,3 +24,8 @@ export const camelToKebab = (input: string): string => input.replace(/([a-z])([A
  * Gets the time elapsed in seconds from a given timestamp.
  */
 export const timeFrom = (from: number) => Math.round((Date.now() - from) / 1_000)
+
+/**
+ * Sleeps for the specified number of milliseconds.
+ */
+export const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
