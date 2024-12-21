@@ -67,8 +67,8 @@ export const wordPressList = async <T>(
         error('Exceeded retry limit')
         throw err
       }
-      info(`Connection error, retrying in 5 seconds (${retry + 1}/${RETRY_LIMIT})`)
-      await sleep(5_000)
+      info(`Connection error, retrying in 10 seconds (${retry}/${RETRY_LIMIT})`)
+      await sleep(10_000)
       return wordPressList(endpoint, objects, page, retry + 1)
     }
   }
