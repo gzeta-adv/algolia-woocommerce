@@ -35,6 +35,10 @@ const Env = {
    */
   ALGOLIA_INDEX_CATEGORIES: get('ALGOLIA_INDEX_CATEGORIES'),
   /**
+   * Name of the Algolia index storing menu items.
+   */
+  ALGOLIA_INDEX_MENU_ITEMS: get('ALGOLIA_INDEX_MENU_ITEMS'),
+  /**
    * Name of the Algolia index storing products.
    */
   ALGOLIA_INDEX_PRODUCTS: get('ALGOLIA_INDEX_PRODUCTS'),
@@ -72,6 +76,16 @@ const Env = {
    * WooCommerce consumer secret.
    */
   WOOCOMMERCE_SECRET: get('WOOCOMMERCE_SECRET'),
+
+  /**
+   * Password for authenticating with the WordPress API.
+   */
+  WORDPRESS_PASSWORD: get('WORDPRESS_PASSWORD'),
+
+  /**
+   * Username for authenticating with the WordPress API.
+   */
+  WORDPRESS_USERNAME: get('WORDPRESS_USERNAME'),
   /**
    * Throws an environment error with the specified message.
    */

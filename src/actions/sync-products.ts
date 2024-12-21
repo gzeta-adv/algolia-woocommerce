@@ -1,12 +1,11 @@
-import { type WooCommerceProduct } from '../clients/woocommerce/index.js'
-import { type Action } from '../lib/types.js'
-import { syncWooCommerceEntities } from './utils.js'
+import type { Action } from '../lib/types.js'
+import { syncService } from './utils.js'
 
 /**
  * Syncs WooCommerce products to Algolia.
  */
 const syncProducts: Action = async () => {
-  await syncWooCommerceEntities<WooCommerceProduct>('products')
+  await syncService('wooCommerce', 'listProducts')
 }
 
 export default syncProducts

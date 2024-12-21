@@ -10,9 +10,17 @@ import type {
   WooCommerceProductType,
 } from './enums.js'
 
-export interface WooCommerceProduct {
+export interface WooCommerceEntity {
   /**
    * Unique identifier for the resource.
+   * @readonly
+   */
+  readonly id: number
+}
+
+export interface WooCommerceProduct {
+  /**
+   * Unique identifier for the product.
    * @readonly
    */
   readonly id: number
