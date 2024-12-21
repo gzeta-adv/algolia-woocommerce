@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0 (2024-12-21)
+
+- feat: add retries to woocommerce requests ([af70e00](https://github.com/gzeta-adv/algolia/commit/af70e00))
+- feat: sync wordpress menu items and add custom transformers ([cd5bb5b](https://github.com/gzeta-adv/algolia/commit/cd5bb5b))
+- ci: ignore dependency updates in commitlint ([7142807](https://github.com/gzeta-adv/algolia/commit/7142807))
+- build(deps): bump @algolia/client-search ([8b8f456](https://github.com/gzeta-adv/algolia/commit/8b8f456))
+
 ## 0.1.0 (2024-12-19)
 
 - feat: add action to synchronize categories ([83d85fc](https://github.com/gzeta-adv/algolia/commit/83d85fc))
