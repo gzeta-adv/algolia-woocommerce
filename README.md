@@ -14,7 +14,7 @@
   </a>
 </div>
 
-GitHub Actions based utilities to manage and synchronize products between WooCommerce and Algolia.
+GitHub Actions based utilities to manage and synchronize products between WooCommerce, WordPress and Algolia.
 
 ## Prerequisites
 
