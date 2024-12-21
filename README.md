@@ -9,8 +9,8 @@
   <a href="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/sync.yml">
     <img src="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/sync.yml/badge.svg" />
   </a>
-  <a href="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/validate-commits.yml">
-    <img src="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/validate-commits.yml/badge.svg" />
+  <a href="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/code-quality.yml">
+    <img src="https://github.com/gzeta-adv/algolia-woocommerce/actions/workflows/code-quality.yml/badge.svg" />
   </a>
 </div>
 

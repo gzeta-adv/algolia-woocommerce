@@ -1,4 +1,4 @@
-name: Validate Commits
+name: Code Quality
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
     types: [opened, reopened, synchronize]
 
 jobs:
-  validate-commits:
+  code-quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
