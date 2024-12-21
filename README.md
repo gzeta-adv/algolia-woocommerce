@@ -52,10 +52,9 @@ Syncs all products and categories between WooCommerce, WordPress and Algolia.
 Run the action with:
 
 ```sh
-# Development
-pnpm action:dev sync
-# Production
 pnpm action sync
+# or
+pnpm action:dev sync
 ```
 
 #### Sync Categories
@@ -65,10 +64,9 @@ Syncs all categories between WooCommerce and Algolia.
 Run the action with:
 
 ```sh
-# Development
-pnpm action:dev sync-categories
-# Production
 pnpm action sync-categories
+# or
+pnpm action:dev sync-categories
 ```
 
 #### Sync Menu Items
@@ -78,10 +76,9 @@ Syncs all menu items between WordPress and Algolia.
 Run the action with:
 
 ```sh
-# Development
-pnpm action:dev sync-menu-items
-# Production
 pnpm action sync-menu-items
+# or
+pnpm action:dev sync-menu-items
 ```
 
 #### Sync Products
@@ -91,10 +88,9 @@ Syncs all products between WooCommerce and Algolia.
 Run the action with:
 
 ```sh
-# Development
-pnpm action:dev sync-products
-# Production
 pnpm action sync-products
+# or
+pnpm action:dev sync-products
 ```
 
 ### Triggers
