@@ -43,55 +43,33 @@ pnpm build
 
 ## Actions
 
+Each action can be run with either:
+
+```sh
+# In production mode with node
+pnpm action <action-name>
+
+# In development mode with tsx
+pnpm action:dev <action-name>
+```
+
 ### Available Actions
 
 #### `sync`
 
 Syncs all products and categories between WooCommerce, WordPress and Algolia.
 
-Run the action with:
-
-```sh
-pnpm action sync
-# or
-pnpm action:dev sync
-```
-
 #### `sync-categories`
 
 Syncs all categories between WooCommerce and Algolia.
-
-Run the action with:
-
-```sh
-pnpm action sync-categories
-# or
-pnpm action:dev sync-categories
-```
 
 #### `sync-menu-items`
 
 Syncs all menu items between WordPress and Algolia.
 
-Run the action with:
-
-```sh
-pnpm action sync-menu-items
-# or
-pnpm action:dev sync-menu-items
-```
-
 #### `sync-products`
 
 Syncs all products between WooCommerce and Algolia.
-
-Run the action with:
-
-```sh
-pnpm action sync-products
-# or
-pnpm action:dev sync-products
-```
 
 ### Triggers
 
