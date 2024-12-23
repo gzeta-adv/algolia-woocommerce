@@ -45,7 +45,7 @@ pnpm build
 
 ### Available Actions
 
-#### Sync
+#### `sync`
 
 Syncs all products and categories between WooCommerce, WordPress and Algolia.
 
@@ -57,7 +57,7 @@ pnpm action sync
 pnpm action:dev sync
 ```
 
-#### Sync Categories
+#### `sync-categories`
 
 Syncs all categories between WooCommerce and Algolia.
 
@@ -69,7 +69,7 @@ pnpm action sync-categories
 pnpm action:dev sync-categories
 ```
 
-#### Sync Menu Items
+#### `sync-menu-items`
 
 Syncs all menu items between WordPress and Algolia.
 
@@ -81,7 +81,7 @@ pnpm action sync-menu-items
 pnpm action:dev sync-menu-items
 ```
 
-#### Sync Products
+#### `sync-products`
 
 Syncs all products between WooCommerce and Algolia.
 

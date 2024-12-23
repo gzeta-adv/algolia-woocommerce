@@ -40,13 +40,13 @@ export const syncService = async <T extends AnyResource, K extends keyof Service
 
   try {
     const indexName = Env.get(`ALGOLIA_INDEX_${entitiesName.replace(/\s/g, '_').toUpperCase()}`)
-    if (!indexName) throw new Error(`Algolia index name for ${entitiesName} is not defined`)
+    if (!indexName) throw new Error(`Algolia index for ${entitiesName} is not defined`)
 
     info(`Uploading objects to Algolia index ${indexName}...`)
     const objects = entities.map(entity => ({ objectID: entity.id, ...entity }) as Record<string, any>)
     const batches = await algolia.partialUpdateObjects({ ...algoliaUpdateOptions, indexName, objects })
     const objectIDs = batches.map(batch => batch.objectIDs).flat()
-    notice(`Updated ${objectIDs.length} objects in ${timeFrom(start) - time} seconds`)
+    notice(`Synced ${objectIDs.length} ${entitiesName} in ${timeFrom(start) - time} seconds`)
   } catch (e) {
     error(`Error uploading ${entitiesName} to Algolia`)
     info(`Elapsed time: ${timeFrom(start)}s`)
