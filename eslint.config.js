@@ -248,5 +248,13 @@ export default [
         'max-lines': 0,
       },
     },
+    {
+      name: 'logger',
+      files: ['src/lib/logger.ts'],
+      rules: {
+        '@typescript-eslint/no-unused-expressions': 0,
+        '@typescript-eslint/no-unsafe-argument': 0,
+      },
+    },
   ),
 ]

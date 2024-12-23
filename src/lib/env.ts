@@ -1,5 +1,3 @@
-import 'dotenv/config'
-
 /**
  * Error thrown when an environment variable is not defined.
  */

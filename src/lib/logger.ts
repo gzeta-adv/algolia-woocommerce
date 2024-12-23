@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions, @typescript-eslint/no-unsafe-argument */
 import console from 'node:console'
 import Env from './env.js'
 

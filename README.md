@@ -95,9 +95,10 @@ pnpm action:dev sync-products
 
 ### Triggers
 
-The [sync workflow](.github/workflows/sync.yml) is configured to run the `sync` action:
+The [`sync` workflow](.github/workflows/sync.yml) is configured to run every 5 minutes, which is the GitHub limit for scheduled workflows.
 
-- Every 5 minutes (GitHub limit)
+Every workflow can also be triggered:
+
 - With a `workflow_dispatch` event via the GitHub interface
 - With a `repository_dispatch` event via the GitHub API:
 
@@ -105,5 +106,5 @@ The [sync workflow](.github/workflows/sync.yml) is configured to run the `sync` 
   curl --request POST \
     --url 'https://api.github.com/repos/<repo>/dispatches' \
     --header 'authorization: Bearer <GITHUB_ACCESS_TOKEN>' \
-    --data '{ "event_type": "sync" }'
+    --data '{ "event_type": "<workflow-name>" }'
   ```
